@@ -1,1 +1,61 @@
-Hello World
+<html>
+  <head>
+    <title> What Can I Buy With? </title>
+    <link rel="stylesheet" href="css/external.css">
+    <!-- AngularJS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body style="height:100%;" ng-app="myApp" ng-controller="myController">
+    <div id="header" style="margin-top:75px; margin-bottom:75px;">
+      <center><h1> What Can I Buy With? </h1></center>
+    </div>
+    <div id="surround" style="background-color:FC4940; padding-bottom:4px;">
+      <!-- F5150A -->
+      <div id="input" style="background-color:F5150A; padding-bottom:35px; padding-top:35px; ">
+        <div id="jumbotron-mask">
+          <div id="jumbotron" >
+            <center>
+              <div class="form-group" style="width:50%;">
+                <h2>Input</h2>
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="number" value="0" class="form-control currency" ng-model="amount" id="amount">
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary">Calculate</button>
+          </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{$scope.model}}
+    <!-- 028793 Green color -->
+    <div id="results" style="height: 800px;">
+      <div id="item2" class="col-md-4"> <center>
+         <h3> Hubble Telescope </h3>
+         <img src="image_repo/hubble.jpeg" width="60%" height="60%" />
+         <br />
+         <h4> You can buy X Hubble Telescopes </h4>
+       </center>
+      </div>
+      <div id="item2" class="col-md-4">
+        <center>
+          <h3> {{ vm.name }} </h3>
+           <img src="{{ vm.source }}" width="60%" height="60%" />
+           <br />
+           <h4> {{ vm.result }} </h4>
+       </center>
+      </div>
+      <div id="item2" class="col-md-4"> 3 </div>
+      <div id="item2" class="col-md-4"> 4 </div>
+      <div id="item2" class="col-md-4"> 5 </div>
+      <div id="item2" class="col-md-4"> 6 </div>
+    </div>
+    <div id="footer">
+    </div>
+  </body>
+</html>
